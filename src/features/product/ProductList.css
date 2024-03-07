@@ -1,0 +1,15 @@
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.product-details {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: #fff;
+    z-index: 999;
+}

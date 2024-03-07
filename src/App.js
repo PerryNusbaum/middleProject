@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import { Route, Routes } from "react-router-dom";
+import { Container } from '@mui/material';
+
 import './App.css';
+import ProductList from "./features/product/ProductList"
+import OrderList from "./features/order/OrderList";
+import NavBar from './NavBar';
+import PrductList from './features/product/ProductList';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ <>
+     <Container sx={{ marginTop: '64px' }}>
+      <Routes>
+        <Route path="" element={<PrductList/>} />
+        <Route path="/productList" element={<PrductList/>} />
+        <Route path="/cart" element={<OrderList/>} />
+      </Routes>
+    </Container>
+ <NavBar/>
+  <ProductList/>
+  <OrderList/>
+ </>
   );
 }
 
